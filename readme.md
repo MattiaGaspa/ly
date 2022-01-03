@@ -39,15 +39,16 @@ Ly should work with any X desktop environment, and provides
 basic wayland support (sway works very well, for example).
 
 ## systemd?
-Unlike what you may have heard, Ly does not require `systemd`,
-and was even specifically designed not to depend on `logind`.
-You should be able to make it work easily with a better init,
-changing the source code won't be necessary :)
+> Unlike what you may have heard, Ly does not require `systemd`,
+> and was even specifically designed not to depend on `logind`.
+> You should be able to make it work easily with a better init,
+> changing the source code won't be necessary :)
+Unlike the [source](https://github.com/nullgemm/ly) this repository is only for OpenRc init system (Gentoo, Artix, ecc...)
 
 ## Cloning and Compiling
 Clone the repository
 ```
-git clone --recurse-submodules https://github.com/nullgemm/ly.git
+git clone --recurse-submodules https://github.com/MattiaGaspa/ly.git 
 ```
 
 Compile
@@ -66,15 +67,9 @@ Install Ly and the provided systemd service file
 sudo make install
 ```
 
-Enable the service
+Enable the service (you may also want to disable the previous display manager)
 ```
-sudo systemctl enable ly.service
-```
-
-If you need to switch between ttys after Ly's start you also have to
-disable getty on Ly's tty to prevent "login" from spawning on top of it
-```
-sudo systemctl disable getty@tty2.service
+sudo rc-update add ly
 ```
 
 ## Configuration
