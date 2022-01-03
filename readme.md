@@ -43,6 +43,7 @@ basic wayland support (sway works very well, for example).
 > and was even specifically designed not to depend on `logind`.
 > You should be able to make it work easily with a better init,
 > changing the source code won't be necessary :)
+
 Unlike the [source](https://github.com/nullgemm/ly) this repository is only for OpenRc init system (Gentoo, Artix, ecc...)
 
 ## Cloning and Compiling
@@ -62,7 +63,7 @@ or a terminal emulator (but desktop environments won't start)
 sudo make run
 ```
 
-Install Ly and the provided systemd service file
+Install Ly and the provided OpenRC service file
 ```
 sudo make install
 ```
