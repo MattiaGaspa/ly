@@ -70,7 +70,7 @@ sudo make install
 
 Enable the service (you may also want to disable the previous display manager)
 ```
-sudo rc-update add ly
+sudo rc-update add ly default
 ```
 
 ## Configuration
